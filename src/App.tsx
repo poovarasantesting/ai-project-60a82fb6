@@ -1,13 +1,13 @@
-import React from "react";
-import { ContactForm } from "./components/ContactForm";
-import { Toaster } from "@/components/ui/toaster";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FacebookPage from './pages/FacebookPage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      <ContactForm />
-      <Toaster />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<FacebookPage />} />
+      </Routes>
+    </Router>
   );
 }
 
